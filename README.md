@@ -140,18 +140,14 @@ Identifying tables with missing statistics
 
 
 ## 4.Trouble Shooting
-trouble-shooting
-
-query hung
-
-lock
+### lock
 如果query被lock住，可以通过sql query，在svv_transaction, pg_locks, stv_tbl_perm, pg_class表中查询到被lock的query id。
 然后将这个pid终止。
 Aws.amazon.com/premiumsupport/knowledge-center/prevent-locks-blocking-queries-redshift/
 
 
 
-集群性能下降
+### 集群性能下降
 https://aws.amazon.com/cn/premiumsupport/knowledge-center/redshift-cluster-degrade/
 
 -监控集群的性能指标
@@ -174,19 +170,18 @@ https://aws.amazon.com/cn/premiumsupport/knowledge-center/redshift-wlm-memory-al
 
 
 Redshift developer guide:
+
 https://docs.amazonaws.cn/en_us/redshift/latest/dg/redshift-dg.pdf
 
 
-Disk spill
+### Disk spill
 -查询内存不够会spill到disk上
 -temporary table会在disk上
 
-STL 视图：
+### STL 视图：
 * STL_AGGR
 * STL_ALERT_EVENT_LOG
 * STL_ANALYZE
 * STL_ANALYZE_COMPRESSION
-
-
 
 STV 系统表中的数据的子集
